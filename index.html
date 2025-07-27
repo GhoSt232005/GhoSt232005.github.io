@@ -1,115 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pranay Sonawane | Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranay Kamlakar Sonawane | Resume</title>
   <style>
-    /* Parallax background setup */
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       scroll-behavior: smooth;
     }
 
+    /* Parallax Header */
     .parallax {
-      background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=1920&q=80');
+      background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80');
       height: 100vh;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      text-align: center;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-
-    .content {
       position: relative;
-      z-index: 2;
-      animation: slideIn 2s ease-out, fadeIn 2.5s ease-in;
+      text-align: center;
+      color: white;
     }
 
-    .content h1 {
+    .parallax::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .intro {
+      z-index: 1;
+      animation: fadeInDown 2s ease;
+    }
+
+    .intro h1 {
       font-size: 3.5rem;
-      margin-bottom: 0.5rem;
-      animation: bounceIn 2.5s ease-in-out;
+      margin: 0;
+      animation: bounceIn 2.5s ease;
     }
 
-    .content p {
-      font-size: 1.5rem;
-      letter-spacing: 1px;
+    .intro p {
+      font-size: 1.2rem;
+      margin-top: 10px;
     }
 
-    @keyframes slideIn {
-      from {
-        transform: translateY(50px);
-      }
-      to {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
+    @keyframes fadeInDown {
+      0% {
         opacity: 0;
+        transform: translateY(-50px);
       }
-      to {
+      100% {
         opacity: 1;
+        transform: translateY(0);
       }
     }
 
     @keyframes bounceIn {
       0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0); 
+        transform: translateY(0);
       }
       40% {
-        transform: translateY(-20px);
+        transform: translateY(-30px);
       }
       60% {
-        transform: translateY(-10px);
+        transform: translateY(-15px);
       }
     }
 
-    /* Extra content after parallax for scroll */
+    /* Resume Section */
     .section {
       padding: 60px 20px;
-      background-color: #f4f4f4;
-      text-align: center;
+      background-color: #f8f9fa;
+      text-align: left;
+      max-width: 900px;
+      margin: auto;
     }
 
     .section h2 {
+      color: #333;
+      border-bottom: 2px solid #ffc107;
+      padding-bottom: 5px;
+    }
+
+    .section p, .section li {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .contact {
+      text-align: center;
       margin-bottom: 20px;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
 
+  <!-- Header Section -->
   <div class="parallax">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Pranay Sonawane</h1>
-      <p>Web Developer | Programmer | Innovator</p>
+    <div class="intro">
+      <h1>Pranay Kamlakar Sonawane</h1>
+      <p>Full Stack Developer | DevOps Enthusiast | ECS Undergraduate</p>
     </div>
   </div>
 
+  <!-- Resume Body -->
   <div class="section">
-    <h2>About Me</h2>
-    <p>I am a passionate web developer with experience in HTML, CSS, JavaScript, MongoDB, React, and Python.</p>
+    <div class="contact">
+      📧 Uniquepranay23@gmail.com | 📞 +91 7738784599 | 🔗 LinkedIn
+    </div>
+
+    <h2>EDUCATION</h2>
+    <p><strong>BE in Electronics and Computer Science</strong>, Shah And Anchor Kutchi Engineering College, Mumbai (2023–2027)  
+    <br>CGPA: 6.69</p>
+    <p><strong>11th & 12th</strong>, Defence Career Academy, Shambhaji Nagar (2021–2023)  
+    <br>Percentage: 62.00%</p>
+
+    <h2>PROFILE SUMMARY</h2>
+    <p>Enthusiastic and detail-oriented ECS undergraduate with strong foundations in Full Stack Development and DevOps. Adept at building responsive web apps, collaborating in teams, and delivering project milestones.</p>
+
+    <h2>EXPERIENCE</h2>
+    <ul>
+      <li>Developed a personal portfolio site with responsive design and clean UI.</li>
+      <li>Built an Expense Tracker using React.js and local storage for real-time data.</li>
+      <li>Created a Library Management System using Python & MongoDB with authentication.</li>
+      <li>Engineered an encrypted Chatroom using JS, Socket.io, and MongoDB.</li>
+      <li>Led college project teams — handled GitHub, task allocation, mentoring, and reviews.</li>
+    </ul>
+
+    <h2>PROJECTS</h2>
+    <ul>
+      <li><strong>Personal Portfolio:</strong> HTML, CSS, JS — deployed on GitHub Pages.</li>
+      <li><strong>Expense Tracker:</strong> React, Node.js, MongoDB — full CRUD app.</li>
+      <li><strong>Encrypted Chatroom:</strong> Socket.IO, Node.js, Crypto.js — real-time secure chat.</li>
+      <li><strong>Library Management System:</strong> Python + MongoDB — role-based access.</li>
+      <li><strong>Random Quote Generator:</strong> JS, HTML, CSS — API-based generator.</li>
+    </ul>
+
+    <h2>SKILLS</h2>
+    <ul>
+      <li>Frontend: HTML, CSS, JavaScript, React</li>
+      <li>Backend: Node.js, Express, MongoDB</li>
+      <li>DevOps: Git, GitHub, CI/CD</li>
+      <li>Others: Responsive Design, Authentication, REST APIs</li>
+    </ul>
+
+    <h2>ACHIEVEMENTS / CERTIFICATIONS</h2>
+    <ul>
+      <li>Full Stack Web Development</li>
+      <li>DevOps Essentials</li>
+      <li>Python</li>
+    </ul>
   </div>
 
 </body>
